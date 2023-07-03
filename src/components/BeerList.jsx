@@ -15,16 +15,18 @@ export default function BeerList() {
     <main>
       <button onClick={getBeers}>Get Beers</button>
       <section className='beer-list'>
-        {!beers
-          ? <h2>Loading...</h2>
-          : beers.map((beer) => (
+        {!beers ? (
+          <h2>Loading...</h2>
+        ) : (
+          beers.map(beer => (
             <BeerCard
               key={beer.id}
               name={beer.name}
               avgRating={beer.rating.average}
-              image={beer.image} />
+              image={beer.image}
+            />
           ))
-        }
+        )}
       </section>
     </main>
   )

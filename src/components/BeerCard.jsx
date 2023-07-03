@@ -1,6 +1,11 @@
+import { useState } from "react";
+
 export default function BeerCard({ name, image, avgRating }) {
+  const [hidden, setHidden] = useState(false)
+  if(hidden) return null
   return (
     <div className="beer-card">
+      <div className="close-button" onClick={() => setHidden(true)}>x</div>
       <div className="beer-image">
         <img src={image} alt={name}
           onError={(e) => {
