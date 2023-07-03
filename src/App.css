@@ -68,3 +68,22 @@ main {
 .beer-card p {
   margin-top: 0;
 }
+
+.rating {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}
+
+.grey-stars {
+  position: absolute;
+  left: calc(50% - 2.5em);
+  filter: grayscale(1) contrast(0.5);
+}
+
+.yellow-stars {
+  margin-top: 0;
+  left: calc(50% - 2.5em);
+  position: absolute;
+  overflow: hidden;
+}

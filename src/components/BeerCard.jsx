@@ -15,7 +15,10 @@ export default function BeerCard({ name, image, avgRating }) {
         />
       </div>
       <h2>{name}</h2>
-      <p style={{ marginTop: 0, overflow: 'hidden', width: avgRating + 'em'}}>⭐️⭐️⭐️⭐️⭐️</p>
+      <div className="rating">
+        <p className="grey-stars">⭐️⭐️⭐️⭐️⭐️</p>
+        <p className="yellow-stars" style={{ width: avgRating + 'em'}}>⭐️⭐️⭐️⭐️⭐️</p>
+      </div>
     </div>
   )
 }
