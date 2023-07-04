@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BeerCard from './BeerCard'
 
 export default function BeerList() {
   const [beers, setBeers] = useState()
+  const [selectedBeer, setSelectedBeer] = useState()
 
   const getBeers = () => {
     fetch('https://api.sampleapis.com/beers/ale')
@@ -11,9 +12,23 @@ export default function BeerList() {
       .catch(alert)
   }
 
+  useEffect(() => { // run once on mount
+    getBeers()
+  }, [])
+
+  useEffect(() => { // triggering a side-effect when selectedBeer (state) changes
+    document.title = selectedBeer || "The Beers!"
+  }, [selectedBeer])
+
+  useEffect(() => { // right before component unmounts
+    return () => {
+      alert("Thanks for all the beers!")
+    }
+  }, [])
+
   return (
     <main>
-      <button onClick={getBeers}>Get Beers</button>
+      {selectedBeer && <h2>Selected: {selectedBeer}</h2>}
       <section className='beer-list'>
         {!beers ? (
           <h2>Loading...</h2>
@@ -22,8 +37,9 @@ export default function BeerList() {
             <BeerCard
               key={beer.id}
               name={beer.name}
-              avgRating={beer.rating.average}
               image={beer.image}
+              avgRating={beer.rating.average}
+              setSelectedBeer={setSelectedBeer}
             />
           ))
         )}
