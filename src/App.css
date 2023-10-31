@@ -30,6 +30,7 @@ main {
   border-radius: 8px;
   margin: 0.5em;
   width: 260px;
+  /* background-color; */
 }
 
 .selected {
@@ -96,4 +97,8 @@ main {
   left: calc(50% - 2.5em);
   position: absolute;
   overflow: hidden;
+}
+
+.beer-card:hover, .beer-card:active {
+  background-color: greenyellow;
 }
