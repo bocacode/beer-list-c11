@@ -32,6 +32,10 @@ main {
   width: 260px;
 }
 
+.selected {
+  border: 1px solid #00ff48;
+}
+
 .beer-image {
   width: 100%;
   max-height: 500px;

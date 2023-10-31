@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function BeerCard({ name, image, avgRating, setSelectedBeer }) {
+export default function BeerCard({ name, image, avgRating, setSelectedBeer, isSelected }) {
   const [hidden, setHidden] = useState(false)
   if(hidden) return null
   return (
-    <div className="beer-card" onClick={() => setSelectedBeer(name)}>
+    <div className={`beer-card ${isSelected && 'selected'}`} onClick={() => setSelectedBeer(name)}>
       <div className="close-button" onClick={() => setHidden(true)}>x</div>
       <div className="beer-image">
         <img src={image} alt={name}
@@ -16,8 +16,8 @@ export default function BeerCard({ name, image, avgRating, setSelectedBeer }) {
       </div>
       <h2>{name}</h2>
       <div className="rating">
-        <p className="grey-stars">XXXXX</p>
-        <p className="yellow-stars" style={{ width: avgRating + 'em'}}>XXXXX</p>
+        <p className="grey-stars">⭐️⭐️⭐️⭐️⭐️</p>
+        <p className="yellow-stars" style={{ width: avgRating + 'em'}}>⭐️⭐️⭐️⭐️⭐️</p>
       </div>
     </div>
   )
