@@ -40,6 +40,7 @@ export default function BeerList() {
               image={beer.image}
               avgRating={beer.rating.average}
               setSelectedBeer={setSelectedBeer}
+              isSelected={selectedBeer === beer.name}
             />
           ))
         )}
