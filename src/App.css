@@ -37,6 +37,10 @@ main {
   max-height: 500px;
 }
 
+.beer-image:hover {
+  transform: scale(1.2)
+}
+
 .close-button {
   position: absolute;
   top: 4px;
