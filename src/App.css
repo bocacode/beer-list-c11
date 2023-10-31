@@ -37,6 +37,10 @@ main {
   max-height: 500px;
 }
 
+.beer-image:hover{
+  transform: scale(1.5);
+}
+
 .close-button {
   position: absolute;
   top: 4px;
@@ -59,6 +63,7 @@ main {
 .beer-image img {
   max-width: 90%;
 }
+
 
 .beer-card h2 {
   font-size: medium;
