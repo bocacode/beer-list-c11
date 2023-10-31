@@ -41,6 +41,11 @@ main {
   transform:scale(1.2);
 }
 
+.beer-card:active {
+  border-width: thick;
+  border-color: yellow;
+}
+
 .beer-image {
   width: 100%;
   max-height: 500px;
