@@ -28,19 +28,19 @@ export default function BeerList() {
 
   return (
     <main>
-      {selectedBeer && <h2>Selected: {selectedBeer}</h2>}
+      {selectedBeer && <h2>Selected: {selectedBeer}</h2>} 
       <section className='beer-list'>
-        {!beers ? (
+        {!beers ? ( //if no beer from api yet, loading. 
           <h2>Loading...</h2>
         ) : (
           beers.map(beer => (
-            <BeerCard
+            <BeerCard //passing props to BeerCard
               key={beer.id}
               name={beer.name}
               image={beer.image}
               avgRating={beer.rating.average}
               setSelectedBeer={setSelectedBeer}
-              isSelected={selectedBeer === beer.name}
+              isSelected={selectedBeer === beer.name && selectedBeer === beer.id}  
             />
           ))
         )}
