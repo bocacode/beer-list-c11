@@ -30,6 +30,7 @@ main {
   border-radius: 8px;
   margin: 0.5em;
   width: 260px;
+  background-color:darkkhaki;
   cursor: pointer;
 }
 
@@ -45,6 +46,10 @@ main {
   border-width: thick;
   border-color: yellow;
 }
+.beer-card:hover, beer-card:active{
+  background-color: green;
+}
+
 
 .beer-image {
   width: 100%;
@@ -59,6 +64,7 @@ main {
 .beer-image:hover {
   transform: scale(1.2)
 }
+
 
 .close-button {
   position: absolute;
