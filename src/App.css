@@ -31,6 +31,10 @@ main {
   margin: 0.5em;
   width: 260px;
 }
+.beer-card:hover, beer-card:active{
+  background-color: green;
+}
+
 
 .beer-image {
   width: 100%;
