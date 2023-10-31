@@ -1,5 +1,5 @@
 body {
-  background-color: #402010;
+  background-color: rgb(243, 212, 37);
   color: antiquewhite;
   padding: 2em;
 }
@@ -49,8 +49,10 @@ main {
   height: 16px;
   font-size: 12px;
   font-weight: 600;
-  transition: 0.3s;
-  cursor: pointer;
+  transition: 0.3s ease-in-out, transform 0.3s ease-in-out; 
+  cursor: grab;
+
+  
 }
 .close-button:hover {
   opacity: 1.0;
