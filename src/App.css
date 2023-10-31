@@ -1,5 +1,5 @@
 body {
-  background-color: #402010;
+  background-color: #402090;
   color: antiquewhite;
   padding: 2em;
 }
@@ -33,7 +33,7 @@ main {
 }
 
 .selected {
-  border: 1px solid #00ff48;
+  border: 1px solid #ff00d0;
 }
 
 .beer-image {
