@@ -11,7 +11,7 @@ header, h1 {
 
 main {
   text-align: center;
-  font-size: larger;
+  font-size: small;
 }
 
 .beer-list {
@@ -19,6 +19,7 @@ main {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
+  outline-color: blueviolet;
 }
 
 .beer-card {
@@ -33,7 +34,7 @@ main {
 }
 
 .beer-image {
-  width: 100%;
+  width: 50%;
   max-height: 500px;
 }
 
