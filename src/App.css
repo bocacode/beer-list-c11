@@ -30,7 +30,7 @@ main {
   border-radius: 8px;
   margin: 0.5em;
   width: 260px;
-  /* background-color; */
+  cursor: pointer;
 }
 
 .selected {
