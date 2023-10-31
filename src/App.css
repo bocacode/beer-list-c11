@@ -1,5 +1,5 @@
 body {
-  background-color: #402010;
+  background-color: #402090;
   color: antiquewhite;
   padding: 2em;
 }
@@ -33,9 +33,18 @@ main {
   /* background-color; */
 }
 
+.selected {
+  border: 1px solid #ff00d0;
+}
+
 .beer-image {
   width: 100%;
   max-height: 500px;
+  transition: 0.3s;
+}
+
+.beer-image:hover{
+  transform: scale(1.5);
 }
 
 .close-button {
@@ -60,6 +69,7 @@ main {
 .beer-image img {
   max-width: 90%;
 }
+
 
 .beer-card h2 {
   font-size: medium;

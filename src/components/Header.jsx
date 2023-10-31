@@ -1,3 +1,3 @@
 export default function Header() {
-  return <h1>The Beers! (IPA) 🍻</h1>
+  return <h1>IPA's! 🍻</h1>
 }
